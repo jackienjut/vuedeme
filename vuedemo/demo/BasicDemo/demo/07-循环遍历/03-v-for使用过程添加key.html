@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Vue 测试实例 - 菜鸟教程(runoob.com)</title>
+    <script src="https://cdn.staticfile.org/vue/2.2.2/vue.min.js"></script>
+</head>
+<body>
+<div id="app">
+   <ul >
+       <li v-for="letter in letters" :key="letter">{{letter}}</li>
+   </ul>
+
+    <button @click="btnClicks()">按钮</button>
+
+
+</div>
+
+<script>
+  const  app = new Vue({
+        el: '#app',
+        data: {
+           letters:['A','B','C','D','E','F','G']
+        }, methods: {
+            btnCLick(){
+
+            }
+      }
+    })
+</script>
+</body>
+</html>

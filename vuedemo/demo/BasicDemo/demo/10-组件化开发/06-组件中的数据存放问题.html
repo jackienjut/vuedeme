@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Vue 测试实例 - 菜鸟教程(runoob.com)</title>
+</head>
+<body>
+
+<div id="app">
+    <cpn1></cpn1>
+
+</div>
+
+<template id="cpn">
+    <div>
+        <h2>{{ title }}</h2>
+        <p>我是内dd容，哈哈哈哈</p>
+    </div>
+</template>
+
+<script src="../../lib/vue.js"></script>
+<script>
+
+    Vue.component('cpn1' , {
+        template: '#cpn',
+        data(){
+            return {
+                title: '我是标题'
+            }
+        }
+    })
+
+    //注册局部组件
+    const app = new Vue({
+        el: '#app',
+        components:{
+        }
+    })
+</script>
+</body>
+</html>

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Vue 测试实例 - 菜鸟教程(runoob.com)</title>
+</head>
+<body>
+
+<!--父组件模板 -->
+<div id="app">
+    <cpn v-on:cpnitemclick="cpnitemclick()"></cpn>
+</div>
+
+<!--子组件模板 -->
+<template id="cpn">
+    <div>
+        <button @click="btnClick(item)" v-for="item in categories ">
+            {{item.name}}
+        </button>
+    </div>
+
+</template>
+
+<script src="../../lib/vue.js"></script>
+<script>
+
+    //子组件
+    cpn = {
+        template: '#cpn',
+        data() {
+            return {
+                categories: [{
+                    id: 1,
+                    name: 'iphone'
+                },
+                    {
+                        id: 2,
+                        name: 'computer'
+                    }]
+            }
+        },
+        methods:{
+            btnClick(item){
+                console.log(item.name);
+                //发射出去一个事件
+                this.$emit('cpnitemclick')
+            }
+        }
+    };
+    //子组件
+    const app = new Vue({
+        el: '#app',
+        components: {
+            cpn
+        },methods:{
+            cpnitemclick(){
+                console.log('cpnitemclick');
+            }
+        }
+
+    })
+</script>
+</body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script src="../../lib/vue.min.js"></script>
+
+<div id="app">
+
+</div>
+<script>
+    //1 ：变量作用域， 变量在什么方位内是可用的
+    {
+        var  name = 'llu';
+        console.log(name);
+    }
+    console.log(name);
+
+    // let 定义的变量只能在快作用域内中访问
+    {
+        let  name1 = 'llu';
+        console.log(name1);
+    }
+    console.log(name1);
+</script>
+</body>
+</html>

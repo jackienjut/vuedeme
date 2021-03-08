@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Vue 测试实例 - 菜鸟教程(runoob.com)</title>
+</head>
+<body>
+
+<div id="app">
+    <cpn v-bind:cmovie="movie" :cmessage="message"></cpn>
+</div>
+
+<template id="cpn">
+    <div>
+        {{ cmovie }}
+        {{ cmessage }}
+    </div>
+</template>
+
+<script src="../../lib/vue.js"></script>
+<script>
+
+    //父传子
+    cpn = {
+        template: '#cpn',
+        data() {
+            return {}
+        },
+        methods: {},
+        /* props: ['cmovie', 'cmessage']*/
+     /*   props: {
+            cmovie:Array,
+            cmessage:String
+
+        }*/
+        props:{
+            cmovie:Array,
+            cmessage:{
+                type:String,
+                default:'aa'
+            }
+        }
+    };
+    //注册局部组件
+    const app = new Vue({
+        el: '#app',
+        data: {
+            message: "lluhaiming",
+            movie: ['AV', '女友']
+        },
+        components: {
+            cpn: cpn
+        }
+    })
+</script>
+</body>
+</html>

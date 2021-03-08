@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Vue 测试实例 - 菜鸟教程(runoob.com)</title>
+    <script src="../../lib/vue.min.js"></script>
+</head>
+<body>
+<div id="app">
+<!--    <input type="text" v-model="message">-->
+
+    <input type="text" v-bind:value="message" @input="inputFunction">
+    {{ message }}
+</div>
+
+<script>
+    const app = new Vue({
+        el: '#app',
+        data: {
+            message: 'abc'
+        },
+        methods: {
+            inputFunction(event){
+                this.message = event.target.value;
+            }
+        }
+    })
+</script>
+</body>
+</html>

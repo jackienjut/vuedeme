@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Vue 测试实例 - 菜鸟教程(runoob.com)</title>
+    <script src="../../lib/vue.min.js"></script>
+</head>
+<body>
+<div id="app">
+
+    <div>checkbox 单选框</div>
+    <label for="license">
+        <input type="checkbox" id="license" v-model="isAgree">同意协议
+    </label>
+    <button :disabled="!isAgree">下一步</button>
+
+    <h2>{{ isAgree }}</h2>
+
+    <div>checkbox 多选框</div>
+    <input type="checkbox" value="篮球" v-model="habbies">篮球
+    <input type="checkbox" value="女人" v-model="habbies">女人
+    <input type="checkbox" value="AV" v-model="habbies">AV
+    <input type="checkbox" value="男" v-model="habbies">男人
+    <h2>{{ habbies }}</h2>
+
+</div>
+
+<script>
+    const app = new Vue({
+        el: '#app',
+        data: {
+            message: 'abc',
+            isAgree: false,
+            habbies:[]
+        },
+        methods: {}
+    })
+</script>
+</body>
+</html>

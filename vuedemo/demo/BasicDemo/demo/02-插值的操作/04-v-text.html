@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script src="../../lib/vue.min.js"></script>
+
+<div id="app">
+
+    <div v-text="message">
+    </div>
+
+</div>
+<script>
+    const app = new Vue({
+        el: '#app',
+        data: {
+            message: '<a href="www.baidu.com">baidu</a>',
+            message2: '<h2>wwo1</h2>'
+        }
+    });
+</script>
+</body>
+</html>

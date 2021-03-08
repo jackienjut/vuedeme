@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script src="../../lib/vue.min.js"></script>
+
+<div id="app">
+    <img v-bind:src="imgUrl"  alt="">
+    <a v-bind:href="linkAddess">百度一下</a>
+    <a :href="linkAddess">百度一下</a>
+</div>
+<script>
+    const app = new Vue({
+        el: '#app',
+        data: {
+            message: '你好啊！',
+            imgUrl: 'assets/logo.png',
+            linkAddess :'http://www.baidu.com'
+        }
+    })
+</script>
+</body>
+</html>

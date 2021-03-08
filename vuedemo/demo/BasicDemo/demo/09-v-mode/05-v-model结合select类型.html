@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Vue 测试实例 - 菜鸟教程(runoob.com)</title>
+    <script src="../../lib/vue.min.js"></script>
+</head>
+<body>
+<div id="app">
+    <div>选择有个</div>
+    <select name="abc" id="fruit" v-model="fruit">
+        <option value="苹果">苹果</option>
+        <option value="香蕉">香蕉</option>
+        <option value="橘子">橘子</option>
+        <option value="芒果">芒果</option>
+        <option value="榴莲">榴莲</option>
+    </select>
+
+    <h2>{{fruit}}</h2>
+
+
+    <select name="abc" id="fruit2" v-model="fruits" multiple>
+        <option value="苹果">苹果</option>
+        <option value="香蕉">香蕉</option>
+        <option value="橘子">橘子</option>
+        <option value="芒果">芒果</option>
+        <option value="榴莲">榴莲</option>
+    </select>
+
+    <h2>{{fruits}}</h2>
+</div>
+
+<script>
+    const app = new Vue({
+        el: '#app',
+        data: {
+            fruit:'',
+            fruits:[]
+        },
+        methods: {}
+    })
+</script>
+</body>
+</html>

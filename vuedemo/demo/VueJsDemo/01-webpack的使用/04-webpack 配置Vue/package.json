@@ -1,0 +1,22 @@
+{
+  "name": "meetwebpack",
+  "version": "1.0.0",
+  "description": "",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "webpack"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "css-loader": "^2.0.2",
+    "path": "^0.12.7",
+    "style-loader": "^1.0.0",
+    "webpack": "^3.6.0"
+  },
+  "dependencies": {
+    "@vue/cli-init": "^4.5.11",
+    "vue": "^2.6.12"
+  }
+}

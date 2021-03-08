@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Vue 测试实例 - 菜鸟教程(runoob.com)</title>
+</head>
+<body>
+
+<div id="app">
+        <cpn :number1="num1" v-bind:number2="num2" ></cpn>
+        <cpn v-bind:number1="num1" :number2="num2"></cpn>
+
+</div>
+
+<template id="cpn">
+    <div>
+        <h2>{{dnumber1}}aa</h2>
+        <input type="text" v-model="dnumber1">
+        <h2>{{number2}}bb</h2>
+    </div>
+</template>
+<script src="../../lib/vue.js"></script>
+<script>
+
+    const cpn = {
+        template:'#cpn',
+        props:{
+            number1:Number,
+            number2:Number
+        },
+        data(){
+            return{
+                dnumber1:this.number1,
+                dnumber2 :this.dnumber2
+            }
+        }
+    }
+
+    const app = new Vue({
+        el: '#app',
+        data: {
+            num1: 1,
+            num2: 0
+        },
+        components:{
+            cpn:cpn,
+        }
+    })
+</script>
+</body>
+</html>

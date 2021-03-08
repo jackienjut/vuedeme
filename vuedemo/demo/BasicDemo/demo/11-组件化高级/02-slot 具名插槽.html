@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<div id="app">
+    <cpn>
+        <button slot="d2" >按钮1</button>
+    </cpn>
+    <cpn></cpn>
+    <cpn></cpn>
+    <cpn></cpn>
+</div>
+
+<template id="cpn">
+    <div>
+        <h2>我是组件！</h2>
+        <p>我是组件！哈哈哈</p>
+        <slot name="d1">
+            <button>按钮</button>
+        </slot>
+        <slot name="d2"></slot>
+        <slot name="d3"></slot>
+    </div>
+</template>
+
+
+<script src="../../lib/vue.js"></script>
+<script>
+
+    const cpn = {
+        template: '#cpn'
+    }
+
+    const app = new Vue({
+        el: '#app',
+        data: {},
+        components: {
+            cpn: cpn
+        },
+        methods: {}
+    })
+</script>
+</body>
+</html>

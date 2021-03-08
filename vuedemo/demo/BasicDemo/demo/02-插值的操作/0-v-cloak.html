@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<style>
+    [v-cloak]{
+        display: none;
+    }
+</style>
+<body>
+<script src="../../lib/vue.min.js"></script>
+
+<div id="app"  v-cloak>
+    <div>防止页面 出现网络加载慢的时候出现加载的{{}}</div>
+    <h2>{{ message }}</h2>
+    <h2>{{ message2 }}11</h2>
+</div>
+<script>
+    setTimeout(function () {
+        const app = new Vue({
+            el: '#app',
+            data: {
+                message: '你好啊！',
+                message2: '你好啊！'
+            }
+        })
+    }, 1000)
+
+</script>
+</body>
+</html>

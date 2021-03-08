@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script src="../../lib/vue.min.js"></script>
+
+<div id="app">
+    <h2>{{ message }}</h2>
+    <div>{{ firstname + ' :  ' + lastname }}</div>
+    <div>{{ firstname }} : {{ lastname }}</div>
+    <div>{{ countyer * 2 }}</div>
+</div>
+<script>
+    const app = new Vue({
+        el: '#app',
+        data: {
+            message: 'hells',
+            firstname: 'kobe',
+            lastname: 'bty',
+            countyer: 100
+        }
+    });
+</script>
+</body>
+</html>
